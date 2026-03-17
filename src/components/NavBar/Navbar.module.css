@@ -1,0 +1,144 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 75px;
+  background: #f0f9f8;
+  box-shadow: 0 4px 20px rgba(58, 52, 91, 0.08);
+}
+
+.logo img {
+  height: 48px;
+  object-fit: contain;
+}
+
+
+.navigate {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #3a345b;
+  transition: 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.links a:hover {
+  color: #d183a9;
+}
+
+.active {
+  color: #d183a9;
+  border-bottom: 2px solid #d183a9;
+}
+
+.authBtn {
+  background: linear-gradient(135deg, #d183a9, #f3c8dd);
+  border: none;
+  padding: 4px 10px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.authBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(209, 131, 169, 0.3);
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #3a345b;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(58, 52, 91, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.showOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================= SIDE MENU ================= */
+
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s ease;
+  z-index: 1000;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.showMenu {
+  right: 0;
+}
+
+.sideMenu a {
+  color: #3a345b;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.sideMenu a:hover {
+  color: #d183a9;
+}
+
+.closeIcon {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #3a345b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .links {
+    display: none;
+  }
+
+  .navigate .authBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
