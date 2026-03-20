@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .navbar {
   position: sticky;
   top: 0;
@@ -7,12 +9,13 @@
   align-items: center;
   padding: 0 5%;
   height: 75px;
-  background: #f0f9f8;
-  box-shadow: 0 4px 20px rgba(58, 52, 91, 0.08);
+  background-color: #f8cad4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
 
 .logo img {
-  height: 48px;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -20,49 +23,55 @@
 .navigate {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .links {
   display: flex;
   list-style: none;
-  gap: 28px;
+  gap: 36px;
 }
 
 .links a {
   text-decoration: none;
   font-weight: 500;
-  color: #3a345b;
+  color: #860f37;
   transition: 0.3s ease;
   padding-bottom: 4px;
+  transition: .2s all;
 }
 
 .links a:hover {
-  color: #d183a9;
+  text-shadow: 0 2px 4px rgba(134, 15, 55, 0.5);
 }
 
 .active {
-  color: #d183a9;
-  border-bottom: 2px solid #d183a9;
+  text-shadow: 0 2px 4px rgba(134, 15, 55, 0.5);
+  border-bottom: 2px solid rgba(134, 15, 55, 0.5);
 }
 
 .authBtn {
-  background: linear-gradient(135deg, #d183a9, #f3c8dd);
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 14px;
   border: none;
-  padding: 4px 10px;
-  border-radius: 25px;
-  color: white;
-  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #92133d;
+  background: linear-gradient(135deg,
+      rgba(243, 214, 228, 0.6),
+      rgba(231, 195, 211, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .authBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(209, 131, 169, 0.3);
 }
-
-/* HAMBURGER */
 
 .hamburger {
   display: none;
@@ -95,7 +104,7 @@
   right: -260px;
   width: 260px;
   height: 100vh;
-  background: #ffffff;
+  background: #fcd9e1;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -104,6 +113,7 @@
   transition: 0.3s ease;
   z-index: 1000;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
 }
 
 .showMenu {

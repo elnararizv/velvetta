@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Script&display=swap');
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background: url("/hero.png");
+  background-position: center;
+  gap: 2rem;
+}
+
+.content {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 2.8rem;  
+  font-family: 'Poppins', sans-serif; 
+  line-height: 1.5;
+  color: #824459;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #faf4f0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 1.3rem;
+  background: #f07086;
+  color: #faf4f0;
+  font-weight: 600;
+  border-radius: 26px;
+  border: 2px solid #fff9f5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.image {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .content,
+  .image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.8rem;
+  }
+}

@@ -9,8 +9,7 @@ function Footer() {
         <div className={styles.section}>
           <img src={logo} alt="Velvetta" className={styles.logo} />
           <p className={styles.description}>
-            Velvetta is a modern patisserie offering fresh,
-            handcrafted desserts made with love and quality ingredients.
+            Handcrafted desserts made with love and quality ingredients.
           </p>
         </div>
 
@@ -30,7 +29,7 @@ function Footer() {
         </div>
 
       </div>
-
+    
       <div className={styles.bottom}>
         © {new Date().getFullYear()} Velvetta. All rights reserved.
       </div>

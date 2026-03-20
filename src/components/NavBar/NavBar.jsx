@@ -63,7 +63,7 @@ function Navbar() {
             </li>
           </ul>
 
-          <Link to="/auth" className={styles.authBtn}>
+          <Link to="/auth">
             <button className={styles.authBtn}>Sign In</button>
           </Link>
 
@@ -71,7 +71,7 @@ function Navbar() {
             className={styles.hamburger}
             onClick={() => setMenuOpen(true)}
           >
-            <FiMenu size={22} />
+            <FiMenu size={25} />
           </div>
         </div>
       </nav>
@@ -86,7 +86,7 @@ function Navbar() {
         <div
           className={styles.closeIcon}
           onClick={() => setMenuOpen(false)}>
-          <FiX size={24} /> </div>
+          <FiX size={25} /> </div>
 
         <NavLink to="/" className={({ isActive }) =>
           isActive ? styles.active : ""
@@ -112,9 +112,7 @@ function Navbar() {
           Contact
         </NavLink>
 
-        <Link to="/auth" className={({ isActive }) =>
-          isActive ? styles.active : ""
-        } onClick={() => setMenuOpen(false)}>
+        <Link to="/auth" onClick={() => setMenuOpen(false)}>
           <button className={styles.authBtn}>Sign In</button>
         </Link>
 
