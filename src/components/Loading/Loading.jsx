@@ -1,3 +1,5 @@
+import { Circles } from 'react-loader-spinner';
+
 export default function Loading() {
   return (
     <div style={{
@@ -6,7 +8,11 @@ export default function Loading() {
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <h2>Loading...</h2>
+      <Circles
+        height="40"
+        width="40"
+        color="#738FBD"
+      />
     </div>
   );
 }
