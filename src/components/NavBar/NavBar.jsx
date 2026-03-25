@@ -89,7 +89,7 @@ function Navbar() {
               Logout
             </button>
           ) : (
-            <Link to="/auth" onClick={() => setMenuOpen(false)}>
+            <Link to="/auth">
               <button className={styles.authBtn}>Sign In</button>
             </Link>
           )}
@@ -145,7 +145,7 @@ function Navbar() {
           </button>
         ) : (
           <Link to="/auth" onClick={() => setMenuOpen(false)}>
-            <button className="authBtn">Sign In</button>
+            <button className={styles.authBtn}>Sign In</button>
           </Link>
         )}
 

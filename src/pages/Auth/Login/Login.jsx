@@ -18,6 +18,7 @@ function Login() {
 
     try {
       const res = await signInWithEmailAndPassword(auth, email, password);
+       e.target.reset();
       Swal.fire({
         icon: 'success',
         title: 'Logged in!',

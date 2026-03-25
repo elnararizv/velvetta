@@ -20,6 +20,7 @@ function Register() {
     try {
       const response = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(response.user, { displayName: fullName });
+       e.target.reset();
        Swal.fire({
               icon: 'success',
               title: 'Successful!',

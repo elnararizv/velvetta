@@ -115,16 +115,22 @@ function ProductDetail() {
         <h2>Comments</h2>
         {!user && <h5>ⓘ You must be logged in to write a comment.</h5>}
 
-          <div className={styles.addComment}>
-            <input
-              type="text"
-              placeholder="Write a comment..."
-              value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
-               disabled={!user}
-            />
-            <button onClick={handleAddComment}  disabled={!user}>Post</button>
-          </div>
+        <div className={styles.addComment}>
+          <input
+            type="text"
+            placeholder="Write a comment..."
+            value={newComment}
+            onChange={(e) => setNewComment(e.target.value)}
+            disabled={!user}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && newComment.trim() !== "") {
+                e.preventDefault();
+                handleAddComment();
+              }
+            }}
+          />
+          <button onClick={handleAddComment} disabled={!user}>Post</button>
+        </div>
 
         <div className={styles.commentList}>
           {comments.map((c) => (
