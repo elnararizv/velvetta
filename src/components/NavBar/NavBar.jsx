@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "../../assets/image/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
+import { auth } from "../../firebase/firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setUser(null);
+      alert("Logged out successfully!");
+      setMenuOpen(false);
+    } catch (error) {
+      console.log("Logout error:", error);
+    }
+  };
   return (
     <>
       <nav className={styles.navbar}>
@@ -63,9 +84,15 @@ function Navbar() {
             </li>
           </ul>
 
-          <Link to="/auth">
-            <button className={styles.authBtn}>Sign In</button>
-          </Link>
+          {user ? (
+            <button className={styles.authBtn} onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link to="/auth" onClick={() => setMenuOpen(false)}>
+              <button className={styles.authBtn}>Sign In</button>
+            </Link>
+          )}
 
           <div
             className={styles.hamburger}
@@ -112,19 +139,15 @@ function Navbar() {
           Contact
         </NavLink>
 
-        <Link to="/auth" onClick={() => setMenuOpen(false)}>
-          <button className={styles.authBtn}>Sign In</button>
-        </Link>
-
-              {/* {isLoggedIn ? (
-              <button  className={styles.authBtn}
-                 onClick={() => {
-                  setMenuOpen(false);}}>Logout</button>
-                 ) : (
-                  <Link to="/auth" onClick={() => setMenuOpen(false)}>
-                   <button className={styles.authBtn}>Sign In</button>
-                  </Link>
-                   )} */}
+        {user ? (
+          <button className={styles.authBtn} onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/auth" onClick={() => setMenuOpen(false)}>
+            <button className="authBtn">Sign In</button>
+          </Link>
+        )}
 
       </div>
     </>

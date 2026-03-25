@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./About.module.css";
 import about1 from "../../assets/image/about1.jpg";
 import about2 from "../../assets/image/about2.jpg";

@@ -17,7 +17,7 @@ function Auth() {
         <div>
           {isLogin ? <Login /> : <Register />}
           <p className={styles.toggle}>
-            {isLogin ? "Don't have an account?" : "Already have an account?"}
+              {isLogin ? "Don't have an account?" : "Already have an account?"}
             <span onClick={() => setIsLogin(!isLogin)}>
               {isLogin ? "Register" : "Login"}
             </span>
