@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Suspense } from 'react'
-import Navbar from '../components/NavBar/Navbar'
+import Navbar from '../components/NavBar/NavBar'
 import Footer from '../components/Footer/Footer'
 import Loading from '../components/Loading/Loading'
 
