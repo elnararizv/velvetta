@@ -44,15 +44,10 @@ Feeling stressed or unhappy? 🍰✨ With **Velvetta**, discover the perfect des
 
 ## 🌐 Live Demo
 
-🚧 Coming soon…
+https://velvetta.vercel.app/
 
 ## 🎯 Project Purpose
 
-Built as a **final project during a development internship**, Velvetta showcases a full front-end experience. All data, structure, and design were created from scratch by the developer.
-
-## 👩‍💻 Author
-
-Developed with passion and attention to detail 💖
-All design and data belong to the author. Completed within 10 days.
+Velvetta is a front-end project developed during a development internship. The entire design, structure, and data were created from scratch by the developer, showcasing attention to detail and practical development skills. The project was completed within 10 days.
 
 ✨ *Velvetta is not just a bakery — it's a digital dessert experience.*
